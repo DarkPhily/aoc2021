@@ -1,5 +1,3 @@
-import sys
-
 with open("../data/input.txt", 'r') as input_file:
     lines = input_file.readlines()
 
@@ -7,7 +5,6 @@ drawn_numbers = lines.pop(0).rstrip("\n").split(',')
 lists = []
 boards = {}
 board_counter = 1
-#board_list = []
 for line in lines:
     value = line.rstrip("\n")
     if value != '':
@@ -20,7 +17,6 @@ for line in lines:
                 board_row = [[]]
                 board_row[0] = lists.pop(0)
                 boards["board{}".format(board_counter)] = board_row
-                #board_list.insert(0, "board{}".format(board_counter))
         board_counter += 1
 
 #--->Part1
