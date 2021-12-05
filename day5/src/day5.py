@@ -45,7 +45,7 @@ def draw_lines(temp_lines, temp_matrix):
             for i, value in enumerate(range(line[2], line[0] + 1)):
                 temp_matrix[line[3]+i][value] += 1
         elif line[2] > line[0] and line[3] > line[1]:
-            for i, value in enumerate(range(line[0], line[2] +1)):
+            for i, value in enumerate(range(line[0], line[2] + 1)):
                 temp_matrix[line[1]+i][value] += 1
         elif line[0] > line[2] and line[3] > line[1]:
             for i, value in enumerate(range(line[2], line[0] + 1)):
