@@ -37,10 +37,8 @@ def count_days(array):
 
 
 def count_fish(array):
-    counted_fish = 0
-    for i in array:
-        counted_fish += i
-    return counted_fish
+    return sum(array)
+
 
 # --->Part1
 population = numpy.array(format_input())
