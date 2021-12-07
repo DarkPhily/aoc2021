@@ -28,7 +28,7 @@ def days_to_pass(array, days):
 
 
 def count_days(array):
-    temp_array = numpy.zeros(9, dtype=numpy.longlong)
+    temp_array = numpy.zeros(9, dtype=numpy.ulonglong)
     unique, counts = numpy.unique(array, return_counts=True)
     counts_dict = dict(zip(unique, counts))
     for key in counts_dict:
@@ -48,8 +48,9 @@ countPopulation = count_fish(population)
 print("Result1: {}".format(countPopulation))
 
 # --->Part2
-population = numpy.array(format_input())
+population = numpy.array(format_input(), numpy.ulonglong)
 population = count_days(population)
-population = days_to_pass(population, 256)
+population = days_to_pass(population, 463)
 countPopulation = count_fish(population)
 print("Result2: {}".format(countPopulation))
+print(numpy.iinfo(numpy.ulonglong))
